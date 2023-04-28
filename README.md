@@ -11,7 +11,7 @@ This system is built with Python and uses the Tweepy and snscrape libraries to i
 To run this system, you will need to set up a few things:
 
 1. Create a Twitter account for the bot and obtain API keys and access tokens.
-2. Install the required Python libraries (Tweepy and OpenAI).
+2. Install the required Python libraries (requirements.txt).
 3. Set up a GPT-3.5 API key and configure the OpenAI library.
 
 Once you have done these things, you can clone this repository and run the `main.py` file to start the reply system.

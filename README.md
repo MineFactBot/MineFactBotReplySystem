@@ -1,34 +1,25 @@
-# Minecraft Facts Twitter Bot - Reply System
+# Minecraft Facts Twitter Bot - Fact Sharing
 
-This is the source code for the reply system of the Minecraft Facts Twitter Bot. The goal of this system is to allow the bot to reply to tweets that mention it and reply to it, providing users with more information about Minecraft.
+This is a Twitter bot that shares interesting facts about Minecraft on an hourly basis. The bot uses OpenAI GPT-3.5 to generate the facts, and is written in Python.
 
-## Technologies
+## Installation
 
-This system is built with Python and uses the Tweepy and snscrape libraries to interact with the Twitter API. It also uses OpenAI's GPT-3.5 to generate answers
+1. Clone this repository to your local machine.
+2. Install the required packages using `pip install -r requirements.txt`.
+3. Create a Twitter API key and access tokens from the [Twitter Developer Portal](https://developer.twitter.com/en/portal/dashboard).
+4. Create a `.env` file in the project directory
+5. Run the bot using `python main.py`.
 
-## Setup
+## Usage
 
-To run this system, you will need to set up a few things:
+The bot is set up to share a new Minecraft fact every hour. (Wait time is hardcoded in main.py)
 
-1. Create a Twitter account for the bot and obtain API keys and access tokens.
-2. Install the required Python libraries (requirements.txt).
-3. Set up a GPT-3.5 API key and configure the OpenAI library.
+You can also modify the `generateFact()` function in `ai.py` to change the way facts are generated. By default, the bot uses OpenAI GPT-3.5 to generate the facts, but you can use any method you like to generate your own facts.
 
-Once you have done these things, you can clone this repository and run the `main.py` file to start the reply system.
+## Contributing
 
-## How it works
+If you find a bug or have a suggestion for a new feature, please open an issue and we'll be happy to help. If you want to contribute code, please fork the repository and submit a pull request with your changes.
 
-The reply system listens for mentions of the bot's Twitter handle (`@minefactbot`). When it detects a mention or reply, it uses the snscrape library to retrieve the text of the tweet and the user who sent it.
+## License
 
-The system then passes the text of the tweet to the OpenAI GPT-3.5 model, which generates an answer. The answer is then tweeted as a reply to the original tweet, tagging the user who sent it.
-
-## Improvements
-
-This system can be improved in a few ways:
-
-1. Smarter fact generation: The OpenAI GPT-3.5 model is quite good at generating Minecraft facts, but there is still room for improvement. The system could be improved by using a more powerful model or by training a custom model on Minecraft-specific data.
-2. More interaction: Currently, the system only replies to mentions of the bot's Twitter handle. It could be improved to listen for other types of interactions, such as direct messages or mentions of specific keywords.
-
-## Conclusion
-
-The Minecraft Facts Twitter Bot's reply system is a simple but effective way to provide users with more information about Minecraft. While there is room for improvement, the system currently works well and is a useful tool for Minecraft fans on Twitter.
+This project is licensed under the MIT License. See the LICENSE file for more information.

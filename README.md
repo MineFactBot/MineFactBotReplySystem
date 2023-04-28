@@ -23,3 +23,11 @@ If you find a bug or have a suggestion for a new feature, please open an issue a
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for more information.
+
+
+## Warning
+
+The `snscrape` library used in this project has been known to be blocked by Twitter in the past. Use of `snscrape` in this project may be against Twitter's terms of service. Use at your own risk.
+We are using it with alt accounts and with 5 minutes delay between tweets, so we are not worried about it. <br>
+Also, we changed the code of snscrape to make it work with the new Twitter API,
+Check out `snscrape/NOTE.md` for more information.
